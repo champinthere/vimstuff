@@ -1,0 +1,32 @@
+Host jump.csail.mit.edu
+    User shreyasb
+    ForwardX11Trusted yes
+    ForwardAgent yes
+    ForwardX11 yes
+    LocalForward 8097:localhost 8097
+Host chronos
+    HostName chronos.csail.mit.edu
+    User shreyasb
+    ForwardX11Trusted yes
+    ForwardAgent yes
+    ForwardX11 yes
+    LocalForward 8097:localhost 8097
+    ProxyJump jump.csail.mit.edu
+Host clinicalml-gw
+    HostName clinicalml-gw
+    User shreyasb
+    ForwardX11Trusted yes
+    ForwardAgent yes
+    ForwardX11 yes
+    LocalForward 8097:localhost 8097
+    ProxyJump chronos
+Host secure-k80
+    HostName k80
+    User shreyasb
+    ForwardX11Trusted yes
+    ForwardAgent yes
+    ForwardX11 yes
+    LocalForward 8097:localhost 8097
+    ProxyJump clinicalml-gw
+Host *
+    SendEnv LANG
