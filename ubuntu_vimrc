@@ -95,6 +95,7 @@ nmap <F8> :TagbarToggle<CR>
 imap jk <Esc>
 inoremap <S-Enter> <CR>end
 nmap <space> :CtrlPTag<CR>
+nnoremap <CR> :w<CR>
 
 "Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
